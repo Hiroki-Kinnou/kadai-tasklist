@@ -1,0 +1,11 @@
+<h1>タスクの編集</h1>
+
+<%= form_with(model: @message, local: true) do |f| %>
+  <div class="form-group">
+    <%= f.select :status, { class: "form-control"} %>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :content, class: 'form-control', rows: 2 %>
+  </div>
+  <%= f.submit 'Update', class: 'btn btn-primary btn-block' %>
+<% end %>
